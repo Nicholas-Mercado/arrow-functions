@@ -124,11 +124,8 @@ let objectLit = () => ({
 console.log(objectLit());
 
 
-let sumAndProduct = (a, b) => {
-  let sum = a + b;
-  let product = a * b;
-  return [sum, product];
-};
+let sumAndProduct = (a, b) => [(a + b), (a * b)];
+
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
@@ -182,17 +179,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// The "this" in joe.scope() refers to the instance of the joe object.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//  The "this" in joe.scopeArrow() refers to the window object. 
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Arrow functions establish "this" based on the scope of the function they are in which is the Window.
